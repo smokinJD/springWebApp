@@ -24,11 +24,4 @@ public class IndexController {
 		return "about";
 	}
 	
-	@RequestMapping("/admin")
-	public String showAdmin(SessionStatus sessionStatus){
-		//esto sirve para cerrar la session
-		sessionStatus.setComplete();
-		
-		return "admin";
-	}
 }

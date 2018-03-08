@@ -11,8 +11,7 @@
 
 	<h1>Index.Jsp</h1>
 	
-	<p>Mensaje de pagina admin: <c:out value="${mensaje}"/></p>
-	<p>Mensaje de sesion: <c:out value="${sessionScope.Bienvenida}"/></p>
+	<p>Mensaje de pagina admin: <c:out value="${adminForm}"/></p>
 	
 	<a href="<c:url value='/about'/>">Acerca de</a> <br>
 	<a href="<c:url value='/admin'/>">Admin</a>
