@@ -11,7 +11,7 @@ public class Admin {
 	//String to String
 	@Override
 	public String toString() {
-		return "Administrador [id=" + id + ", nombre=" + nombre + ", cargo=" + cargo + "]";
+		return "Admin [id=" + id + ", nombre=" + nombre + ", cargo=" + cargo + ", fechaCreacion=" + fechaCreacion + "]";
 	}
 
 	//Constructor
