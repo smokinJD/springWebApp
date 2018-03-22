@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Gestion Admin</title>
+<title>Gestion Direccion</title>
 <script type="text/javascript" src="<c:url value='/res/js/jquery.min.js'/>" ></script>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
@@ -17,21 +17,17 @@
 </script>
 </head>
 <body>
-	<h1>Admin.jsp</h1>
+	<h1>Direccion.jsp</h1>
 
-	<form:form action="${pageContext.request.contextPath}/admin/save" method="post" commandName="admin">
+	<form:form action="${pageContext.request.contextPath}/direccion/save" method="post" commandName="direccion">
 		<table>
-			<c:if test="${admin.id ne 0}">
-				<form:input path="id" type="hidden" />
-				<form:input path="fechaCreacion" type="hidden" />
-			</c:if>
 			<tr>
-				<td>Nombre</td>
-				<td><form:input path="nombre" type="text" /></td>
+				<td>Calle</td>
+				<td><form:input path="calle" type="text" /></td>
 			</tr>
 			<tr>
-				<td>Cargo</td>
-				<td><form:input path="cargo" type="text" /></td>
+				<td>Codigo Postal</td>
+				<td><form:input path="cp" type="text" /></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="Guardar"></td>
@@ -41,12 +37,9 @@
 
 	<c:out value="${resultado}"></c:out>
 
-	<c:forEach items="${admins}" var="admin">
+ 	<c:forEach items="${direcciones}" var="direccion">
 		<p>
-			<c:out value="${admin}"></c:out>
-			<a href="<c:url value='/direccion/${admin.id}'/>">Direcciones</a>
-			<a href="<c:url value='/admin/${admin.id}/update'/>">Actualizar</a>
-			<a class="confirm" href="<c:url value='/admin/${admin.id}/delete'/>">Eliminar</a>
+			<c:out value="${direccion}"></c:out>
 		</p>
 	</c:forEach>
 </body>

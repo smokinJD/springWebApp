@@ -16,10 +16,10 @@ public class AdminService {
 	@Autowired
 	private AdminDao adminDao;
 	
-	public boolean save(Admin admin){
+	public void save(Admin admin){
 		admin.setFechaCreacion(new Timestamp(new Date().getTime()));
 		
-		return adminDao.save(admin);
+		adminDao.save(admin);
 	}
 
 	public List<Admin> findAll() {
@@ -32,21 +32,22 @@ public class AdminService {
 		return adminDao.findById(id);
 	}
 
-	public boolean saveOrUpdate(Admin adminForm) {
+	public void saveOrUpdate(Admin adminForm) {
 		
 		if(adminForm.getId() == 0){
 			adminForm.setFechaCreacion(new Timestamp(new Date().getTime()));
-			return adminDao.save(adminForm);
+			adminDao.save(adminForm);
 		}else{
 			
-			return adminDao.update(adminForm);
+			adminDao.update(adminForm);
 		}
 		
 	}
 
-	public boolean delete(int id) {
+	public void delete(int id) {
 		
-		return adminDao.delete(id);
+		Admin admin = adminDao.findById(id);
+		adminDao.delete(admin);
 	}
 
 }
