@@ -17,6 +17,8 @@
 </script>
 </head>
 <body>
+<c:import url="/WEB-INF/views/logout.jsp"></c:import>
+
 	<h1>Direccion.jsp</h1>
 
 	<form:form action="${pageContext.request.contextPath}/direccion/save" method="post" commandName="direccion">

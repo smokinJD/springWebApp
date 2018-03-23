@@ -8,6 +8,7 @@
 <title>Inicio</title>
 </head>
 <body>
+<c:import url="/WEB-INF/views/logout.jsp"></c:import>
 
 	<h1>Index.Jsp</h1>
 	

@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:import url="/WEB-INF/views/logout.jsp"></c:import>
+	
 	<h1>About.jsp</h1>
 	
 	<p>Mensaje de pagina admin: <c:out value="${mensaje}"/></p>

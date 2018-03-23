@@ -24,4 +24,16 @@ public class IndexController {
 		return "about";
 	}
 	
+	@RequestMapping("/login")
+	public String login(){
+	  
+	  return "login";
+	}
+	
+	@RequestMapping("/logout")
+    public String logout(){
+      
+      return "/";
+    }
+	
 }
